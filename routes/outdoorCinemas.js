@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { chromium } = require("playwright");
+const { getMovieDetails } = require("../services/tmdbService");
 
 router.get("/", async (req, res) => {
   const browser = await chromium.launch({ headless: true });
@@ -51,9 +52,12 @@ router.get("/", async (req, res) => {
     const showings = [];
 
     for (let i = 0; i < venueShowing.length; i++) {
+      const movieDetails = await getMovieDetails(venueShowing[i]);
+
       showings.push({
         title: venueShowing[i],
         date: showingDate[i],
+        movie: movieDetails,
       });
     }
 
