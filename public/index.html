@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; flex-direction: column; background-color: #3C3C3B;">
+    <h1 style="color: #EBEBD3; text-align: center;">Welcome to the EventNowAPI</h1>
+    <h2 style="color: #EBEBD3; text-align: center;">Please see the below points to guide you through the API.</h2>
+    <div style="height: 300px; width: 300px;">
+        <details style="border: 1px solid black; padding: 15px; border-radius: 7px; background-color: antiquewhite; margin-bottom: 10px;">
+            <summary style="font-size: 1.2em; cursor: pointer;">What is this for?</summary>
+            <p style="font-size: 1em;">The plan for this API is to be used alongside a frontend framework.<br /><br />For event data to be gathered either by using external APIs or through scraping by using this API and then providing data to a frontend.</p>
+        </details>
+        <details style="border: 1px solid black; padding: 15px; border-radius: 7px; background-color: antiquewhite; margin-bottom: 10px;">
+            <summary style="font-size: 1.2em; cursor: pointer;">How can this be used?</summary>
+            <p style="font-size: 1em;">Currently there is only the following endpoint:<br /><br /><span style="font-weight: bold; font-size: 1.1em;">/outdoor-cinemas</span><br />This endpoint will make a GET request which will then scrape outdoor cinema venues, showings and dates. After the data is scraped, it will then make a fetch request to the TMDB API to gather movie posters, images, titles, release dates and more. The data collected is excessive currently however I plan for it to be utilised later down the line as the development progresses.</p>
+        </details>
+    </div>
+</body>
+</html>
