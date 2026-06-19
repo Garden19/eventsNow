@@ -1,11 +1,27 @@
+# Environment Variables
 .env
+.env.*
 
-*node_modules
+# Dependencies
+node_modules/
+
+# Build Output
+dist/
+.angular/
+out-tsc/
 
 # Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+playwright-report/
+test-results/
+blob-report/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
